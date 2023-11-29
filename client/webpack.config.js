@@ -11,7 +11,8 @@ module.exports = () => {
     mode: 'development',
     entry: {
       main: './src/js/index.js',
-      install: './src/js/install.js'
+      install: './src/js/install.js',
+      editor: './src/js/editor.js'
     },
     output: {
       filename: '[name].bundle.js',
@@ -28,6 +29,7 @@ module.exports = () => {
       }),
       new WebpackPwaManifest({
         fingerprints: false,
+        inject: true,
         name: 'Just Another Text Editor',
         short_name: 'J.A.T.E.',
         description: 'Takes notes with JavaScript syntax highlighting!',
