@@ -35,7 +35,8 @@ new CacheFirst({
       status: [0, 200],
     }),
     new ExpirationPlugin({
-      maxEntries: 
+      maxEntries: 60,
+      maxAgeSeconds: 30 * 24 * 60 * 60
     })
   ]
 }));
